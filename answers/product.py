@@ -6,7 +6,7 @@ from async_utility import asyncio_run
 class Product:
     all_products: list
     highly_rated_products: list
-    api_products_endpoint = "https://coinmap.org/api/v1/venues/"
+    api_products_endpoint = "https://example.com/api/products"
 
     def __init__(self):
         self.session = asyncio_run(self.init_session())
@@ -24,8 +24,8 @@ class Product:
             async with self.session.get(self.api_products_endpoint) as response:
                 if response.status == 200:
                     json_response = await response.json()
-                    if isinstance(json_response["venues"], list):
-                        self.all_products = json_response["venues"]
+                    if isinstance(json_response, list):
+                        self.all_products = json_response
                     else:
                         self.all_products = []
                 else:

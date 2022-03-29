@@ -48,9 +48,9 @@ class TestProduct:
                 assert response.status == 200
                 assert response.headers.get('Content-Type') == 'application/json'
                 items = response.json()
-                # assert isinstance(items, list)
-                # for item in items:
-                #     assert isinstance(item, dict)
+                assert isinstance(items, list)
+                for item in items:
+                    assert isinstance(item, dict)
             asyncio_run(run_api())
 
     @pytest.mark.asyncio
