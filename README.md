@@ -17,3 +17,25 @@ Pretend that an API exists at https://example.com/api/products which returns:
 1. Write a function in Python to consume this API.
 2. Write another function for business logic to find all products rated 4 and above.
 3. Write enough unit / integration tests to completely cover the code in both functions.
+
+#### Answer 1:
+<details>
+<p>
+
+##### Find answers in the three files in the answer folder
+
+    INSTALLATION:
+_Create a new python project and copy the files in the answer folder into the newly created project.
+then install the following packages using pip._
+    
+    pip install pytest asyncio[standips] aiohttp
+    pip install install pytest-asyncio pytest-austin pytest-cov
+    
+_To run test_
+
+    python -m pytest test_product.py --asyncio-mode=strict --cov --profile-mode=all
+   
+  
+
+</p>
+</details>
